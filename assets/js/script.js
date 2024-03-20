@@ -1,14 +1,17 @@
+// htmlde ki experinces ve projectBody isimli classları yakaladım.
 
 const experinces = document.querySelector(".experinces");
 const projects = document.querySelector(".projectsBody");
 
-
+// skills jsonunda ki veriyi çekmek için getItem1 fonksiyonunu oluşturdum. 
 async function getItem1() {
           const response = await fetch("assets/json/skills.json");
           const data = await response.json();
           // console.log(data);
           return data;
 }
+
+// jsonda ki veriyi listelemek için bu fonksiyonu oluşturdum.
 async function listItem1() {
           const data = await getItem1();
           // console.log(data);
@@ -22,12 +25,16 @@ async function listItem1() {
                     `   
           }
 }
+
+// project jsonunda ki veriyi çekmek için getItem2 fonksiyonunu oluşturdum.
 async function getItem2() {
           const response = await fetch("assets/json/projects.json");
           const data = await response.json();
           // console.log(data);
           return data;
 }
+
+// jsonda ki veriyi listelemek için bu fonksiyonu oluşturdum.
 async function listItem2(){
           const data = await getItem2();
           // console.log(data);
@@ -48,5 +55,7 @@ async function listItem2(){
                     `
           }
 }
+// listItem2 fonksiyonunu çağırarak veriyi listeliyorum.
 listItem2()
+// listItem1 fonksiyonunu çağırarak veriyi listeliyorum.
 listItem1()
